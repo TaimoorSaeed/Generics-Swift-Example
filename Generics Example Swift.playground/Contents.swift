@@ -46,6 +46,8 @@ printElementsFromArray(a: doubleArray)
 printElementsFromArray(a: intArray)
 
 // Ex 2
+
+
 func doNothing<T> (x: T) -> T {
     return x
 }
@@ -54,6 +56,32 @@ doNothing(x: "123")
 doNothing(x: 123)
 doNothing(x: 12.1121212)
 doNothing(x: true)
+
+// Ex 3 Structure
+
+
+    var emptyArray = [String]()
+
+struct GenericArray<T> {
+    var items = [T]()
+    mutating func push(item: T){
+        items.append(item)
+    }
+}
+
+var myFriends = ["Jenny" , "Jhon", "Rob"]
+
+var array = GenericArray(items: myFriends)
+array.push(item: "tamur")
+
+array.items
+
+array.push(item: "kam")
+
+array.items
+
+
+
 
 
 
