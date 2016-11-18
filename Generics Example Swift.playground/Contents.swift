@@ -27,6 +27,37 @@ func printDoubleFromArray(a:[Double]){
     }
 }
 
+printStringFromArray(a: stringArray)
+printIntFromArray(a: intArray)
+printDoubleFromArray(a: doubleArray)
+
+// Generics
+
+//Ex 1
+func printElementsFromArray<T>(a: [T]){
+for elements in a {
+    print(elements)
+}
+}
+
+
+printElementsFromArray(a: stringArray)
+printElementsFromArray(a: doubleArray)
+printElementsFromArray(a: intArray)
+
+// Ex 2
+func doNothing<T> (x: T) -> T {
+    return x
+}
+
+doNothing(x: "123")
+doNothing(x: 123)
+doNothing(x: 12.1121212)
+doNothing(x: true)
+
+
+
+
 
 
 
